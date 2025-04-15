@@ -1,0 +1,43 @@
+/* ...existing code... */
+
+/* Navigation links/buttons styling */
+.nav-link, .nav-button {
+  color: white !important; /* Force white text */
+  font-weight: 500 !important;
+  position: relative;
+  padding: 8px 15px !important;
+  margin: 0 5px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Subtle background */
+  border-radius: 0; /* Remove rounded corners */
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active, .nav-button.active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Add a subtle underline effect */
+.nav-link::after, .nav-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-button:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* ...existing code... */
